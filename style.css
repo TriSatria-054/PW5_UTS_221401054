@@ -5,7 +5,7 @@
 }
 
 body{
-    background: red;
+    background: #f1f1f1;
 }
 
 body, input, button {
@@ -33,12 +33,39 @@ main {
 
 }
 
+.row {
+    background-color:#f6f6f6;
+    margin-bottom: 20px; 
+    padding: 20px; 
+  }
+
+.carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    background-color: grey;
+    border-radius: 50%;
+}
+
+
+h2,
+    h5,
+    p {
+      color: black;
+    }
+
+
+
+
+
 .input_section {
     display: flex;
     flex-direction: column;
     padding: 16px;
-    border: 1px solid black;
-    border-radius: 10px;
+    
 }
 
 .input_section > h2 {
@@ -96,8 +123,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 16px;
-    border: 1px solid black;
-    border-radius: 10px;
+    
 }
 
 .search_section > h2 {
@@ -108,8 +134,8 @@ main {
     padding: 16px;
     width: 100%;
     display: grid;
-    grid-template-columns: auto 1fr 0.5fr;
-    grid-gap: 10px;
+    /* grid-template-columns: auto 1fr 0.5fr; */
+    /* grid-gap: 10px; */
 }
 
 .search_section > form > label {
@@ -128,13 +154,14 @@ main {
     border: 0;
     border-radius: 5px;
     cursor: pointer;
+    padding: 8px;
 }
 
 .book_shelf {
     margin: 16px 0 0 0;
-    border: 1px solid black;
+    
     padding: 16px;
-    border-radius: 10px;
+    
 }
 
 .book_shelf > h2 {
@@ -147,8 +174,7 @@ main {
 
 .book_shelf > .book_list > .book_item {
     padding: 8px 16px 16px 16px;
-    border: 1px solid black;
-    border-radius: 5px;
+   
     margin: 10px 0;
 }
 

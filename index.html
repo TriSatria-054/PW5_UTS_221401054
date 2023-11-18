@@ -1,89 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bookshelf Apps</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="head_bar">
-  <h1 class="head_bar__title">Bookshelf Apps</h1>
-</header>
-<main>
-  <section class="input_section">
-    <h2>Masukkan Buku Baru</h2>
-    <form id="inputBook">
-      <div class="input">
-        <label for="inputBookTitle">Judul</label>
-        <input id="inputBookTitle" type="text" required>
+  <!-- navigation bar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://trisatria-054.github.io/PW5_UTS_221401054/">Baca Apps</a>
+      <!-- dropdown menu -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- tombol dropdown 1 -->
+          <li class="nav-item">
+            <a class="nav-link" href="https://trisatria-054.github.io/PW5_UTS_221401054/">Home</a>
+          </li>
+          <!-- tombol dropdown 2 -->
+          <li class="nav-item">
+            <a class="nav-link" href="#top">Top</a>
+          </li>
+          <!-- tombol dropdown 3 -->
+          <li class="nav-item">
+            <a class="nav-link" href="#read">Read</a>
+          </li>
+          <!-- tombol dropdown 4 -->
+          <li class="nav-item">
+            <a class="nav-link" href="#kartu">Review</a>
+          </li>
+          
+        </ul>
       </div>
-      <div class="input">
-        <label for="inputBookAuthor">Penulis</label>
-        <input id="inputBookAuthor" type="text" required>
-      </div>
-      <div class="input">
-        <label for="inputBookYear">Tahun</label>
-        <input id="inputBookYear" type="number" required>
-      </div>
-      <div class="input_inline">
-        <label for="inputBookIsComplete">Selesai dibaca</label>
-        <input id="inputBookIsComplete" type="checkbox">
-      </div>
-      <button id="bookSubmit" type="submit">Masukkan Buku ke rak <span>Belum selesai dibaca</span></button>
-    </form>
-  </section>
-  
-  <section class="search_section">
-    <h2>Cari Buku (Opsional)</h2>
-    <form id="searchBook">
-      <label for="searchBookTitle">Judul</label>
-      <input id="searchBookTitle" type="text">
-      <button id="searchSubmit" type="submit">Cari</button>
-    </form>
-  </section>
-  
-  <section class="book_shelf">
-    <h2>Belum selesai dibaca</h2>
-    
-    <div id="incompleteBookshelfList" class="book_list">
-<!--      <article class="book_item">-->
-<!--        <h3>Book Title</h3>-->
-<!--        <p>Penulis: John Doe</p>-->
-<!--        <p>Tahun: 2002</p>-->
-<!--    -->
-<!--        <div class="action">-->
-<!--          <button class="green">Selesai dibaca</button>-->
-<!--          <button class="red">Hapus buku</button>-->
-<!--        </div>-->
-<!--      </article>-->
     </div>
-  </section>
-  
-  <section class="book_shelf">
-    <h2>Selesai dibaca</h2>
-    
-    <div id="completeBookshelfList" class="book_list">
-<!--      <article class="book_item">-->
-<!--        <h3>Book Title</h3>-->
-<!--        <p>Penulis: John Doe</p>-->
-<!--        <p>Tahun: 2002</p>-->
-<!--        -->
-<!--        <div class="action">-->
-<!--          <button class="green">Belum selesai di Baca</button>-->
-<!--          <button class="red">Hapus buku</button>-->
-<!--        </div>-->
-<!--      </article>-->
+  </nav>
+
+  <!-- container -->
+  <main class="container mt-4">
+    <div class="row" id="top">
+      <div class="col-12">
+        <h2 class="text-center">Top Buku dan Manga</h2>
+      </div>
     </div>
-  </section>
-</main>
 
-<script src="main.js"></script>
+    <!-- carousel manga dan buku -->
+    <div class="row">
+      <div id="bookMangaCarousel" class="carousel slide col-12" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Manga 1 sampai selesai yang berisi key title,author,year,image menggunakan for loop dan array object dengan javascript document.getElementById("carousel-inner").innerHTML-->
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bookMangaCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bookMangaCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- input informasi manga atau buku -->
+    <div class="row" id="read">
+      <section class="input_section col-lg-6">
+        <h2 class="text-center">Masukkan Buku Baru</h2>
+        <form id="inputBook">
+          <div class="mb-3">
+            <label for="inputBookTitle" class="form-label">Judul</label>
+            <input type="text" class="form-control" id="inputBookTitle" required>
+          </div>
+          <div class="mb-3">
+            <label for="inputBookAuthor" class="form-label">Penulis</label>
+            <input type="text" class="form-control" id="inputBookAuthor" required>
+          </div>
+          <div class="mb-3">
+            <label for="inputBookYear" class="form-label">Tahun</label>
+            <input type="number" class="form-control" id="inputBookYear" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="inputBookIsComplete">
+            <label class="form-check-label" for="inputBookIsComplete">Selesai dibaca</label>
+          </div>
+          <button id="bookSubmit" type="submit" class="btn btn-dark">Masukkan Buku ke rak <span>Belum selesai dibaca</span></button>
+        </form>
+      </section>
 
+      <!-- cari buku yang sudah dimasukkan ke rak buku -->
+      <section class="search_section col-lg-6">
+        <h2 class="text-center">Cari Buku (Opsional)</h2>
+        <form id="searchBook">
+          <div class="mb-3">
+            <label for="searchBookTitle" class="form-label">Judul</label>
+            <input type="text" class="form-control" id="searchBookTitle">
+          </div>
+          <button id="searchSubmit" type="submit" class="btn btn-dark">Cari</button>
+        </form>
+      </section>
+    </div>
+
+    <div class="row">
+      <section class="book_shelf col-lg-6">
+        <h2 class="text-center">Belum selesai dibaca</h2>
+        <div id="incompleteBookshelfList" class="book_list">
+          <!-- list buku yang belum selesai dibaca. Dengan menggunakan javascript dapat memindahkan buku ke rak selesai dibaca -->
+        </div>
+      </section>
+
+      <section class="book_shelf col-lg-6">
+        <h2 class="text-center">Selesai dibaca</h2>
+        <div id="completeBookshelfList" class="book_list">
+          <!-- list buku yang sudah selesai dibaca. Dengan menggunakan javascript dapat memindahkan buku ke rak belum selesai dibaca -->
+        </div>
+      </section>
+    </div>
+
+    <!-- card berisi deskripsi/review buku dan manga menggunakan for loop dan array object dengan javascript document.getElementById("kartu").innerHTML -->
+    <div class="row" id="kartu">
+      
+    </div>
+  </main>
+
+  <!-- Bootstrap Footer -->
+  <footer class="footer-section bg-dark text-light text-center py-3">
+    &copy; 2023 Baca Apps
+  </footer>
+
+  <!-- Bootstrap JS  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
